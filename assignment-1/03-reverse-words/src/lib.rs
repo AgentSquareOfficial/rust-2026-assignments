@@ -1,6 +1,9 @@
 pub fn reverse_words(sentence: &str) -> String {
-    let _ = sentence;
-    todo!("implement reverse_words")
+    sentence
+        .split_whitespace()
+        .rev()
+        .collect::<Vec<&str>>()
+        .join(" ")
 }
 
 #[cfg(test)]
